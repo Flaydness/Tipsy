@@ -83,6 +83,7 @@ class ViewController: UIViewController {
             self.buttonToDefault()
             self.zeroButton.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             self.zeroButton.configuration?.baseForegroundColor = .white
+            self.totalPercent = 0
         })
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -114,6 +115,7 @@ class ViewController: UIViewController {
             self.buttonToDefault()
             self.tenButton.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             self.tenButton.configuration?.baseForegroundColor = .white
+            self.totalPercent = 10
         })
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -136,6 +138,7 @@ class ViewController: UIViewController {
             self.buttonToDefault()
             self.twentyButton.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             self.twentyButton.configuration?.baseForegroundColor = .white
+            self.totalPercent = 20
         })
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -210,7 +213,9 @@ class ViewController: UIViewController {
         buttonConfig.titleTextAttributesTransformer = transformer
         
         
-        var button = UIButton(configuration: buttonConfig)
+        var button = UIButton(configuration: buttonConfig, primaryAction: UIAction(){ _ in
+            self.calculate()
+        })
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         button.layer.cornerRadius = 10
@@ -218,6 +223,21 @@ class ViewController: UIViewController {
         return button
         
     }()
+    
+    func calculate() {
+        let bill = topTextField.text!
+        let numberOfPeople = stapper.value
+        let tip = Double(totalPercent)
+        if bill != "" {
+            let billTotal = Double(bill)!
+            let result = billTotal * (1 + tip / 100) / Double(numberOfPeople)
+            let secondVC = SecondViewController()
+            secondVC.totalScore = result
+            secondVC.totalPercent = totalPercent
+            secondVC.totalPeople = Int(numberOfPeople)
+            self.present(secondVC, animated: true)
+        }
+    }
     
     private lazy var botView: UIView = {
         var view = UIView()

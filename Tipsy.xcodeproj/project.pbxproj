@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11B7F244298986B7004C2B5F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7F243298986B7004C2B5F /* SecondViewController.swift */; };
 		11EB14D2298831A700ABB83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB14D1298831A700ABB83B /* AppDelegate.swift */; };
 		11EB14D4298831A700ABB83B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB14D3298831A700ABB83B /* SceneDelegate.swift */; };
 		11EB14D6298831A700ABB83B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB14D5298831A700ABB83B /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11B7F243298986B7004C2B5F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		11EB14CE298831A700ABB83B /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EB14D1298831A700ABB83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11EB14D3298831A700ABB83B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				11EB14D5298831A700ABB83B /* ViewController.swift */,
+				11B7F243298986B7004C2B5F /* SecondViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B7F244298986B7004C2B5F /* SecondViewController.swift in Sources */,
 				11EB14D6298831A700ABB83B /* ViewController.swift in Sources */,
 				11EB14D2298831A700ABB83B /* AppDelegate.swift in Sources */,
 				11EB14D4298831A700ABB83B /* SceneDelegate.swift in Sources */,
